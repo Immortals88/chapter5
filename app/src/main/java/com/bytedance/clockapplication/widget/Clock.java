@@ -200,7 +200,7 @@ public class Clock extends View {
         int amPm = calendar.get(Calendar.AM_PM);
         int degSecond=second*6;
         int degMinute=minute*6+(int)(second*0.1);
-        int degHour=hour*30+degMinute/120;
+        int degHour=hour*30+degMinute/12;
         int endX = (int) (mCenterX + mWidth*0.28 * Math.cos(Math.toRadians(450-degHour)));
         int endY = (int) (mCenterX - mWidth*0.28* Math.sin(Math.toRadians(450-degHour)));
         canvas.drawLine(mCenterX, mCenterY,endX,endY,nHour);
